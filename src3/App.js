@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import './App.css';
 import LandingPage from './LandingPage'
 import AppLayout from './AppLayout'
@@ -22,13 +22,13 @@ const App = () =>{
    
       <Switch>
          <Route exact path='/' component={LandingPage} />
-         <div>
+         <Fragment>
          <Dummy/>
          <Switch>
          <ProtectedRoute exact path='/app' component={AppLayout} />
          <ProtectedRoute exact path='/sample' component={Sample} />
          </Switch>
-         </div>
+         </Fragment>
         
     
      
